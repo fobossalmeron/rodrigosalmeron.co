@@ -20,7 +20,7 @@ const en = {
   content: {
     page_title:
       "Rodrigo Salmeron, interaction designer and developer based in CDMX",
-    meta_description: "Get to know us better. Read about us.",
+    meta_description: "Get to know us better. Read about me.",
     about: {
       intro:
         "Rodrigo Salmeron is an interaction designer and developer based in CDMX, co-founder and design & technology director in Acueducto.",
