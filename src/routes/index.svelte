@@ -13,16 +13,8 @@
 </script>
 
 <style>
-  h1,
-  figure,
-  p {
-    text-align: center;
-    margin: 0 auto;
-  }
-
   h1 {
     font-size: 2.8em;
-    font-weight: 400;
     margin: 0 0 0.5em 0;
   }
 
@@ -37,13 +29,11 @@
   }
 
   p {
-    margin: 1em auto;
+    font-size: 1.6rem;
+    max-width: 580px;
+    margin-top: 0;
   }
-
   @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
   }
 </style>
 
@@ -51,14 +41,6 @@
   <title>Rodrigo Salmeron</title>
 </svelte:head>
 
-<h1>{locale.content.page_title}</h1>
-
-<figure>
-  <img alt="Success Kid" src="successkid.jpg" />
-  <figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
 <p>
-  <strong>Try editing this file (src/routes/index.svelte) to test live
-    reloading.</strong>
+  {@html locale.content.about.intro}
 </p>

@@ -23,9 +23,9 @@ const en = {
     meta_description: "Get to know me better. Read about me.",
     about: {
       intro:
-        "Rodrigo Salmeron is an interaction designer and developer based in CDMX, co-founder and design & technology director in Acueducto.",
+        "Rodrigo Salmeron is an interaction designer and developer based in CDMX. He’s currently Design & Technology Director and co-founder at <a href='https://acueducto.studio/'>Acueducto</a>.",
       full:
-        "Rodrigo Salmeron is an interaction designer and developer based in CDMX, co-founder and design & technology director in Acueducto. I love music, tattoos, BA in visual communications, MA in interaction design, self-taught front-end developer. BELOW you’ll find some selected pieces I’ve either designed or coded, for detailed case studies of my work please visit acueducto.studio/en/work",
+        "Rodrigo Salmeron is an interaction designer and developer based in CDMX. He’s currently Design & Technology Director at Acueducto, which he co-founded in late 2019. Since 2008, Rodrigo works with brand identities, web experiences and<br/><br/> I love music, tattoos, BA in visual communications, MA in interaction design, self-taught front-end developer. <br/><br/>BELOW you’ll find some selected pieces I’ve either designed or coded, for detailed case studies of my work please visit <a href='https://acueducto.studio/en/work'>acueducto.studio/en/work</a>",
     },
     cookie_message: {
       title: "Gimme cookies",
