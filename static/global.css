@@ -1,10 +1,21 @@
 body {
     margin: 0;
-    font-family: GT, Helvetica Neue, Arial, sans-serif;
+    font-family: Monument, Helvetica Neue, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #060809;
-    background-color: #F8D7DD;
+    /* background-color: #F8D7DD; //ROSA */
+    /* background-color: rgb(232, 0, 28); //ROJO DE PIZZAPIZA */
+    background-color: #DBE3EA;
+}
+
+@font-face {
+    font-family: "Monument";
+    font-display: block;
+    src: url("font/MonumentRegular.woff") format("woff2"),
+        url("font/MonumentRegular.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
 }
 
 @font-face {

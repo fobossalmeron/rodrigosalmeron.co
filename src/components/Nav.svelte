@@ -62,6 +62,7 @@
     bottom: -1px;
     opacity: 0;
     left: 15px;
+    border-radius: 10px;
   }
 </style>
 
