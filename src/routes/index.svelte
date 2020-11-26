@@ -39,7 +39,8 @@
 </style>
 
 <svelte:head>
-  <title>Rodrigo Salmeron</title>
+  <title>{locale.content.index_title}</title>
+  <meta description={locale.content.index_description} />
 </svelte:head>
 
 <TransitionWrapper>

@@ -46,6 +46,7 @@
   }
   img {
     width: 70px;
+    height: 66.5px;
   }
   figcaption {
     font-size: 0rem;

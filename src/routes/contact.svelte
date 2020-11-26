@@ -1,5 +1,16 @@
+<script context="module">
+  export function preload({ params, query }) {
+    return this.fetch(`locale/en.json`)
+      .then((r) => r.json())
+      .then((locale) => {
+        return { locale };
+      });
+  }
+</script>
+
 <script>
   import TransitionWrapper from "../components/TransitionWrapper.svelte";
+  export let locale;
 </script>
 
 <style>
@@ -36,7 +47,8 @@
 </style>
 
 <svelte:head>
-  <title>Contact - Rodrigo Salmeron</title>
+  <title>{locale.content.contact_title}</title>
+  <meta description={locale.content.contact_description} />
 </svelte:head>
 
 <TransitionWrapper>
