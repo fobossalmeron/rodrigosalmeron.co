@@ -9,16 +9,32 @@
 </script>
 
 <script>
+  import TransitionWrapper from "../components/TransitionWrapper.svelte";
   export let locale;
 </script>
 
 <style>
   p {
-    font-size: 1.6rem;
-    max-width: 580px;
+    font-size: 2.4rem;
+    max-width: 820px;
     margin-top: 0;
+    width: 100%;
   }
-  @media (min-width: 480px) {
+  @media (max-width: 1000px) {
+    p {
+      font-size: 1.8rem;
+      max-width: 640px;
+    }
+  }
+  @media (max-width: 700px) {
+    p {
+      font-size: 1.4rem;
+    }
+  }
+  @media (max-width: 600px) {
+    p {
+      font-size: 1.2rem;
+    }
   }
 </style>
 
@@ -26,6 +42,8 @@
   <title>Rodrigo Salmeron</title>
 </svelte:head>
 
-<p>
-  {@html locale.content.about.intro}
-</p>
+<TransitionWrapper>
+  <p>
+    {@html locale.content.about.full}
+  </p>
+</TransitionWrapper>

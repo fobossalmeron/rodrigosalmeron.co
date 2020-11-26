@@ -1,11 +1,15 @@
 <script>
   export let segment;
+  export let show;
+  export let w;
+  import { fly } from "svelte/transition";
+  import { quadOut } from "svelte/easing";
 </script>
 
 <style>
   nav {
-    padding: 1em 2em;
-    font-size: 1.7rem;
+    padding: 2.5em 2em;
+    font-size: 1.6rem;
     position: fixed;
     right: 0;
     z-index: 1000;
@@ -28,6 +32,9 @@
   li {
     display: block;
     float: left;
+  }
+  li:first-of-type {
+    margin-right: 20px;
   }
   li::after {
     content: "";
@@ -64,23 +71,41 @@
     left: 15px;
     border-radius: 10px;
   }
+
+  @media (max-width: 1000px) {
+    nav {
+      bottom: 0;
+      left: 0;
+      background-color: #ececec;
+      padding: 2rem;
+      box-sizing: border-box;
+      height: 95px;
+    }
+  }
+  @media (max-width: 600px) {
+    nav {
+      padding: 1.5rem;
+      height: 80px;
+    }
+  }
 </style>
 
 <nav>
   <ul>
-    <li>
-      <a
-        aria-current={segment === 'about' ? 'page' : undefined}
-        href="about">about</a>
-    </li>
-
-    <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-    <li>
-      <a
-        rel="prefetch"
-        aria-current={segment === 'blog' ? 'page' : undefined}
-        href="blog">contact</a>
-    </li>
+    {#if show}
+      <li
+        in:fly={{ y: w > 600 ? 20 : 10, duration: 250, delay: w > 600 ? 400 : 600, easing: quadOut }}>
+        <a
+          aria-current={segment === undefined ? 'page' : undefined}
+          href="/">about</a>
+      </li>
+      <li
+        in:fly={{ y: w > 600 ? 20 : 10, duration: 250, delay: w > 600 ? 550 : 750, easing: quadOut }}>
+        <a
+          rel="prefetch"
+          aria-current={segment === 'contact' ? 'page' : undefined}
+          href="contact">contact</a>
+      </li>
+    {/if}
   </ul>
 </nav>

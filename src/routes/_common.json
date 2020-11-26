@@ -1,7 +1,7 @@
 {
   "nav": [
-    { "title": "about", "link": "/en/about" },
-    { "title": "contact", "link": "/en/contact" }
+    { "title": "about", "link": "/" },
+    { "title": "contact", "link": "/contact" }
   ],
   "legal_nav": {
     "cookies": { "title": "cookies", "link": "/en/cookies" },

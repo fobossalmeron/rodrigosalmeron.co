@@ -1,40 +1,72 @@
 <script>
-  import Nav from "../components/Nav.svelte";
+  import GoogleAnalytics from "sapper-google-analytics/GoogleAnalytics.svelte";
+  import { stores } from "@sapper/app";
+  import { onMount } from "svelte";
 
+  let ga_measurment_id = "UA-SOMETHING"; // your analytics id
+
+  import Nav from "../components/Nav.svelte";
   export let segment;
+  let w;
+
+  import { fly } from "svelte/transition";
+  import { quadOut } from "svelte/easing";
+
+  let show = false;
+  onMount(() => {
+    show = true;
+  });
 </script>
 
 <style>
   main {
     position: relative;
-    padding: 2em;
+    padding: 3em;
     box-sizing: border-box;
+    font-family: inherit;
     min-height: 100vh;
+    background: linear-gradient(
+      114.37deg,
+      #f86b64 6.93%,
+      rgba(255, 201, 222, 0.24) 84.5%
+    );
+  }
+  @media (max-width: 600px) {
+    main {
+      padding: 2em;
+      margin-bottom: 50px;
+    }
   }
   figure {
-    position: fixed;
-    right: 18%;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    height: auto;
+    margin: 0 0 40px 0;
+    width: 70px;
+    height: 66.5px;
+  }
+  img {
+    width: 70px;
   }
   figcaption {
     font-size: 0rem;
   }
-  p {
-    font-size: 1.6rem;
-    max-width: 580px;
-    margin-top: 0;
-  }
 </style>
 
-<Nav {segment} />
+<GoogleAnalytics {stores} id={ga_measurment_id} />
+<Nav {segment} {show} {w} />
 
-<main>
-  <slot />
-  <a href=".">
-    <figure>
-      <img alt="Rodrigo Salmeron" src="img/logo.svg" />
-      <figcaption>Rodrigo Salmeron</figcaption>
-    </figure>
-  </a>
+<main bind:clientWidth={w}>
+  {#if show}
+    <a href=".">
+      <figure
+        in:fly={{ y: w > 600 ? 20 : 10, duration: 250, delay: 250, easing: quadOut }}>
+        <img alt="Rodrigo Salmeron" src="img/logo.svg" />
+        <figcaption>Rodrigo Salmeron</figcaption>
+      </figure>
+    </a>
+    <div
+      in:fly={{ y: w > 600 ? 20 : 10, duration: 550, delay: w > 1000 ? 600 : 400, easing: quadOut }}>
+      <slot />
+    </div>
+  {/if}
 </main>
