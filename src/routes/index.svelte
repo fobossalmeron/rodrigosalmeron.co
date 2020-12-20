@@ -14,7 +14,15 @@
 </script>
 
 <style>
-  p {
+  h1 {
+    display: inline;
+  }
+  h1::after {
+    content: "–";
+    display: inline;
+  }
+  p,
+  h1 {
     font-size: 2.4rem;
     max-width: 820px;
     margin-top: 0;
@@ -48,6 +56,7 @@
 </svelte:head>
 
 <TransitionWrapper>
+  <h1>Rodrigo Salmeron</h1>
   <p>
     {@html locale.content.about.p}
   </p>

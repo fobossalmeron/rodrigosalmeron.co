@@ -13,7 +13,7 @@
   import { quadOut } from "svelte/easing";
 
   const gradients = [
-    ["#f86b64", "rgba(255, 201, 222, 0.24)"], //original
+    ["#F8D7DD", "rgba(248, 215, 221, 0.24)"], //original
     ["#f4f4f4", "rgba(255, 201, 222, 0.24)"], //blanco
     ["#FBD59D", "rgba(255, 201, 222, 0.24)"], //naranja
     ["#CDE9D9", "rgba(255, 201, 222, 0.24)"], //verde
