@@ -14,6 +14,9 @@
 </script>
 
 <style>
+  h1 {
+    font-size: 0;
+  }
   .linked {
     display: inline-flex;
     flex-direction: column;
@@ -62,6 +65,7 @@
 </svelte:head>
 
 <TransitionWrapper>
+  <h1>Looking for great work? Contact me</h1>
   <div class="linked">
     <a rel="external" href="mailto:hola@rodrigosalmeron.co">email</a>
     <a href="https://www.linkedin.com/in/rodrigosalmeron/">linkedin</a>

@@ -1,7 +1,7 @@
 const en = {
   content: {
     index_title:
-      "Rodrigo Salmeron– Creative entrepreneur, interaction designer and developer based in CDMX.",
+      "Rodrigo Salmeron– Interaction designer and developer based in CDMX.",
     index_description:
       "Principal and co-founder at Acueducto, an interface design and digital strategy firm.",
     contact_title: "Contact me",
