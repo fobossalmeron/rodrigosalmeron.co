@@ -3,7 +3,7 @@
   import { stores } from "@sapper/app";
   import { onMount } from "svelte";
 
-  let ga_measurment_id = "UA-SOMETHING"; // your analytics id
+  let ga_measurment_id = "G-B18T8LJHRN";
 
   import Nav from "../components/Nav.svelte";
   export let segment;

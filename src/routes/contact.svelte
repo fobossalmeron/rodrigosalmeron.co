@@ -59,6 +59,7 @@
   <div class="linked">
     <a rel="external" href="mailto:hola@rodrigosalmeron.co">email</a>
     <a href="https://www.linkedin.com/in/rodrigosalmeron/">linkedin</a>
+    <a href="https://github.com/fobossalmeron">github</a>
     <a href="https://acueducto.studio/">
       <svg
         xmlns="http://www.w3.org/2000/svg"
