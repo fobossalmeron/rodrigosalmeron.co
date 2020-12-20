@@ -12,8 +12,21 @@
   import { fly } from "svelte/transition";
   import { quadOut } from "svelte/easing";
 
+  const gradients = [
+    ["#f86b64", "rgba(255, 201, 222, 0.24)"], //original
+    ["#f4f4f4", "rgba(255, 201, 222, 0.24)"], //blanco
+    ["#FBD59D", "rgba(255, 201, 222, 0.24)"], //naranja
+    ["#CDE9D9", "rgba(255, 201, 222, 0.24)"], //verde
+    ["#FFEBA4", "rgba(255, 201, 222, 0.24)"], //amarillo
+    ["#D3E4F3", "rgba(255, 201, 222, 0.24)"], //azul
+  ];
+
+  const random = Math.floor(Math.random() * gradients.length);
+  let gradient = [];
+
   let show = true;
   onMount(() => {
+    gradient = gradients[random];
     show = true;
   });
 </script>
@@ -27,8 +40,8 @@
     min-height: 100vh;
     background: linear-gradient(
       114.37deg,
-      #f86b64 6.93%,
-      rgba(255, 201, 222, 0.24) 84.5%
+      var(--gradient) 6.93%,
+      var(--gradient2) 84.5%
     );
   }
   @media (max-width: 600px) {
@@ -53,10 +66,19 @@
   }
 </style>
 
+<svelte:head>
+  <meta property="og:image" content="https://rodrigosalmeron.co/img/og.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
+</svelte:head>
+
 <GoogleAnalytics {stores} id={ga_measurment_id} />
 <Nav {segment} {show} {w} />
 
-<main bind:clientWidth={w}>
+<main
+  bind:clientWidth={w}
+  style="--gradient: {gradient[0]}; --gradient2:{gradient[1]};">
   {#if show}
     <a href=".">
       <figure

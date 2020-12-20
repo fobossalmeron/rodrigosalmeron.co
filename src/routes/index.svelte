@@ -41,6 +41,7 @@
 <svelte:head>
   <title>{locale.content.index_title}</title>
   <meta description={locale.content.index_description} />
+  <meta property="og:url" content="https://rodrigosalmeron.co" />
 </svelte:head>
 
 <TransitionWrapper>

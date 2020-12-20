@@ -53,6 +53,11 @@
 <svelte:head>
   <title>{locale.content.contact_title}</title>
   <meta description={locale.content.contact_description} />
+  <meta property="og:title" content={locale.content.contact_title} />
+  <meta
+    property="og:description"
+    content={locale.content.contact_description} />
+  <meta property="og:url" content="https://rodrigosalmeron.co/contact" />
 </svelte:head>
 
 <TransitionWrapper>
