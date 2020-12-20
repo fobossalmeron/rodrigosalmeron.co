@@ -40,8 +40,11 @@
 
 <svelte:head>
   <title>{locale.content.index_title}</title>
+  <meta property="og:title" content={locale.content.index_title} />
   <meta description={locale.content.index_description} />
+  <meta property="og:description" content={locale.content.index_description} />
   <meta property="og:url" content="https://rodrigosalmeron.co" />
+  <link rel="canonical" href="https://rodrigosalmeron.co" />
 </svelte:head>
 
 <TransitionWrapper>
