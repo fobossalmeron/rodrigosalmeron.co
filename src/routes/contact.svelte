@@ -15,14 +15,18 @@
 
 <style>
   .linked {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     font-size: inherit;
     font-size: 2.4rem;
   }
+  .linked a:last-of-type {
+    margin-left: 70px;
+  }
   svg {
     width: 50px;
-    margin-right: 15px;
+    position: absolute;
+    left: 0px;
   }
   a {
     margin-bottom: 10px;
@@ -53,7 +57,7 @@
 
 <TransitionWrapper>
   <div class="linked">
-    <a rel=external href="mailto:hola@rodrigosalmeron.co">email</a>
+    <a rel="external" href="mailto:hola@rodrigosalmeron.co">email</a>
     <a href="https://www.linkedin.com/in/rodrigosalmeron/">linkedin</a>
     <a href="https://acueducto.studio/">
       <svg

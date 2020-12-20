@@ -45,6 +45,6 @@
 
 <TransitionWrapper>
   <p>
-    {@html locale.content.about.full}
+    {@html locale.content.about.p}
   </p>
 </TransitionWrapper>

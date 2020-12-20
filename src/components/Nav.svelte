@@ -54,6 +54,7 @@
     text-decoration: none;
     padding: 1em 0.5em 2px;
     position: relative;
+    background-image: none !important;
   }
   a:hover::after {
     opacity: 1;

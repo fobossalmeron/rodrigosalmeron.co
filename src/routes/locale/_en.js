@@ -1,39 +1,14 @@
-// Ordinarily, you'd generate this data from markdown files in your
-// repo, or fetch them from a database of some kind. But in order to
-// avoid unnecessary dependencies in the starter template, and in the
-// service of obviousness, we're just going to leave it here.
-
-// This file is called `_posts.js` rather than `posts.js`, because
-// we don't want to create an `/blog/posts` route — the leading
-// underscore tells Sapper not to do that.
-
 const en = {
-  nav: [
-    { title: "about", link: "/en/about" },
-    { title: "contact", link: "/en/contact" },
-  ],
-  legal_nav: {
-    cookies: { title: "cookies", link: "/en/cookies" },
-    privacy: { title: "privacy", link: "/en/privacy" },
-  },
-  lang: "en",
   content: {
-    index_title: "Rodrigo Salmeron, interaction designer and developer.",
-    index_description: "Design & Technology Director and co-founder at Acueducto.",
-    contact_title: "Contact - Rodrigo Salmeron",
-    contact_description: "Let's work together.",
+    index_title:
+      "Rodrigo Salmeron– Creative entrepreneur, interaction designer and developer based in CDMX.",
+    index_description:
+      "Principal and co-founder at Acueducto, an interface design and digital strategy firm.",
+    contact_title: "Contact me",
+    contact_description: "¿Are you looking for great work?",
     about: {
-      intro:
-        "Rodrigo Salmeron is an interaction designer and developer based in CDMX. He’s currently Design & Technology Director and co-founder at <a href='https://acueducto.studio/'>Acueducto</a>.",
-      full:
-        "Rodrigo Salmeron is an interaction designer and developer based in CDMX. He’s currently Design & Technology Director at <a href='https://acueducto.studio/'>Acueducto</a>, which he co-founded in late 2019. Since 2008, Rodrigo works with brand identities, digital experiences and art direction, he has specialized in user interface design, interaction design and strategy.<br/><br/> I'm passionate about music production and performance, tattoos and tattooing, writing, thinking and implementing. I studied a BA in visual communications, a MA in interaction design, i'm a self-taught front-end developer and now creative entrepreneur. <br/><br/>Below you’ll find some selected pieces I’ve either designed or coded, for detailed case studies of my work please visit <a href='https://acueducto.studio/en/work'>my firm's portfolio</a>.",
-    },
-    cookie_message: {
-      title: "Gimme cookies",
-      p: "Cookies are here for you, but you can review my ",
-      link: "cookie policy",
-      p_continued:
-        " and opt-out if you wish. If you continue to use this site, I’ll asume you’re okay with it.",
+      p:
+        "Rodrigo Salmeron–</br>Creative entrepreneur, interaction designer and developer based in CDMX. </br></br>Since 2008, I’ve worked with brand strategies, art direction and digital experiences. I now specialize in solving business challenges through design-led digital technology.</br></br>I’m currently principal at <a href='https://acueducto.studio'>Acueducto</a>, an interface design and digital strategy firm, which I co-founded in late 2019.</br></br>Off-work, I’m a detail-driven music producer and lyricist, an amateur tattooer and a sci-fi obsessed plant admirer. I studied a BA in visual communications, an MA in interaction design and taught myself how to code.</br></br>Below you’ll find some selected pieces I’ve either designed or coded, for detailed case studies of my work please visit <a href='https://acueducto.studio/en/work'>my firm's portfolio</a>.",
     },
   },
   error_page: {

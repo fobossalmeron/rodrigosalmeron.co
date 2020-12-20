@@ -12,7 +12,7 @@
   import { fly } from "svelte/transition";
   import { quadOut } from "svelte/easing";
 
-  let show = false;
+  let show = true;
   onMount(() => {
     show = true;
   });
