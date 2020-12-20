@@ -53,7 +53,7 @@
 <svelte:head>
   <title>{locale.content.contact_title}</title>
   <meta property="og:title" content={locale.content.contact_title} />
-  <meta description={locale.content.contact_description} />
+  <meta name="description" content={locale.content.contact_description} />
   <meta
     property="og:description"
     content={locale.content.contact_description} />
