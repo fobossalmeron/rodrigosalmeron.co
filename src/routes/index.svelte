@@ -42,7 +42,8 @@
     }
   }
   @media (max-width: 600px) {
-    p {
+    p,
+    h1 {
       font-size: 1.2rem;
     }
   }

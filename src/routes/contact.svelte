@@ -42,6 +42,13 @@
     .linked {
       font-size: 1.8rem;
     }
+    .linked a:last-of-type {
+      margin-left: 60px;
+      margin-top: 10px;
+    }
+    svg {
+      width: 40px;
+    }
   }
   @media (max-width: 700px) {
     .linked {

@@ -61,8 +61,8 @@
   }
   @media (max-width: 600px) {
     main {
-      padding: 2em;
-      margin-bottom: 50px;
+      padding: 2em 2em 4em 2em;
+      margin-bottom: 70px;
     }
   }
 </style>
