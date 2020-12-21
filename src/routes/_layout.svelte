@@ -9,22 +9,19 @@
   export let segment;
   let w;
 
-  import { fly } from "svelte/transition";
-  import { quadOut } from "svelte/easing";
-
   const gradients = [
-    ["#F8D7DD", "rgba(248, 215, 221, 0.24)"], //original
-    ["#f4f4f4", "rgba(255, 201, 222, 0.24)"], //blanco
-    ["#FBD59D", "rgba(255, 201, 222, 0.24)"], //naranja
-    ["#CDE9D9", "rgba(255, 201, 222, 0.24)"], //verde
-    ["#FFEBA4", "rgba(255, 201, 222, 0.24)"], //amarillo
-    ["#D3E4F3", "rgba(255, 201, 222, 0.24)"], //azul
+    ["#F8D7DD"], //original
+    ["#f4f4f4"], //blanco
+    ["#FBD59D"], //naranja
+    ["#CDE9D9"], //verde
+    ["#FFEBA4"], //amarillo
+    ["#D3E4F3"], //azul
   ];
 
   const random = Math.floor(Math.random() * gradients.length);
   let gradient = [];
 
-  let show = true;
+  let show = false;
   onMount(() => {
     gradient = gradients[random];
     show = true;
@@ -41,28 +38,32 @@
     background: linear-gradient(
       114.37deg,
       var(--gradient) 6.93%,
-      var(--gradient2) 84.5%
+      rgba(255, 201, 222, 0.24) 84.5%
     );
+  }
+  img {
+    position: relative;
+    height: auto;
+    margin: 0 0 40px 0;
+    width: 70px;
+    height: 66.5px;
+    transform: translateY(15px);
+    opacity: 0;
+    transition: 0.2s cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  a:not(p a) {
+    background-image: none;
+  }
+  img.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.25s 0.25s cubic-bezier(0.5, 1, 0.89, 1);
   }
   @media (max-width: 600px) {
     main {
       padding: 2em;
       margin-bottom: 50px;
     }
-  }
-  figure {
-    position: relative;
-    height: auto;
-    margin: 0 0 40px 0;
-    width: 70px;
-    height: 66.5px;
-  }
-  img {
-    width: 70px;
-    height: 66.5px;
-  }
-  figcaption {
-    font-size: 0rem;
   }
 </style>
 
@@ -77,20 +78,11 @@
 <GoogleAnalytics {stores} id={ga_measurment_id} />
 <Nav {segment} {show} {w} />
 
-<main
-  bind:clientWidth={w}
-  style="--gradient: {gradient[0]}; --gradient2:{gradient[1]};">
-  {#if show}
-    <a href=".">
-      <figure
-        in:fly={{ y: w > 600 ? 20 : 10, duration: 250, delay: 250, easing: quadOut }}>
-        <img alt="Rodrigo Salmeron" src="img/logo.svg" />
-        <figcaption>Rodrigo Salmeron</figcaption>
-      </figure>
-    </a>
-    <div
-      in:fly={{ y: w > 600 ? 20 : 10, duration: 550, delay: w > 1000 ? 600 : 400, easing: quadOut }}>
-      <slot />
-    </div>
-  {/if}
+<main bind:clientWidth={w} style="--gradient: {gradient}">
+  <a href=".">
+    <img class={show && 'reveal'} alt="Rodrigo Salmeron" src="img/logo.svg" />
+  </a>
+  <div>
+    <slot />
+  </div>
 </main>

@@ -18,7 +18,7 @@
     font-size: 0;
   }
   .linked {
-    display: inline-flex;
+    display: block;
     flex-direction: column;
     font-size: inherit;
     font-size: 2.4rem;
@@ -35,6 +35,8 @@
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    float: left;
+    clear: left;
   }
   @media (max-width: 1000px) {
     .linked {
@@ -65,7 +67,7 @@
 </svelte:head>
 
 <TransitionWrapper>
-  <h1>Looking for great work? Contact me</h1>
+  <h1>Looking for great work? Let's talk</h1>
   <div class="linked">
     <a rel="external" href="mailto:hola@rodrigosalmeron.co">email</a>
     <a href="https://www.linkedin.com/in/rodrigosalmeron/">linkedin</a>

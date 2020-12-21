@@ -1,9 +1,6 @@
 <script>
   export let segment;
   export let show;
-  export let w;
-  import { fly } from "svelte/transition";
-  import { quadOut } from "svelte/easing";
 </script>
 
 <style>
@@ -32,6 +29,8 @@
   li {
     display: block;
     float: left;
+    transform: translateY(15px);
+    opacity: 0;
   }
   li:first-of-type {
     margin-right: 20px;
@@ -83,6 +82,14 @@
       height: 95px;
     }
   }
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.25s 0.4s cubic-bezier(0.5, 1, 0.89, 1);
+  }
+  .reveal2 {
+    transition: 0.25s 0.55s cubic-bezier(0.5, 1, 0.89, 1);
+  }
   @media (max-width: 600px) {
     nav {
       padding: 1.5rem;
@@ -93,20 +100,17 @@
 
 <nav>
   <ul>
-    {#if show}
-      <li
-        in:fly={{ y: w > 600 ? 20 : 10, duration: 250, delay: w > 600 ? 400 : 600, easing: quadOut }}>
-        <a
-          aria-current={segment === undefined ? 'page' : undefined}
-          href="/">about</a>
-      </li>
-      <li
-        in:fly={{ y: w > 600 ? 20 : 10, duration: 250, delay: w > 600 ? 550 : 750, easing: quadOut }}>
-        <a
-          rel="prefetch"
-          aria-current={segment === 'contact' ? 'page' : undefined}
-          href="contact">contact</a>
-      </li>
-    {/if}
+    <li class={show ? 'reveal' : ''}>
+      <a
+        aria-current={segment === undefined ? 'page' : undefined}
+        href="/">about</a>
+    </li>
+    <li class={show ? 'reveal reveal2' : ''}>
+      <a
+        rel="prefetch"
+        aria-current={segment === 'contact' ? 'page' : undefined}
+        sapper:noscroll
+        href="contact">contact</a>
+    </li>
   </ul>
 </nav>

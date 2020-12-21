@@ -29,13 +29,15 @@
     width: 100%;
   }
   @media (max-width: 1000px) {
-    p {
+    p,
+    h1 {
       font-size: 1.8rem;
       max-width: 640px;
     }
   }
   @media (max-width: 700px) {
-    p {
+    p,
+    h1 {
       font-size: 1.4rem;
     }
   }
