@@ -1,3 +1,10 @@
+<script context="module">
+  export async function preload(page) {
+    let path = page.path;
+    return { path };
+  }
+</script>
+
 <script>
   import GoogleAnalytics from "sapper-google-analytics/GoogleAnalytics.svelte";
   import { stores } from "@sapper/app";
@@ -6,8 +13,15 @@
   let ga_measurment_id = "G-B18T8LJHRN";
 
   import Nav from "../components/Nav.svelte";
+  import Ld from "../components/Ld";
   export let segment;
+  export let path;
+  let jsonldScript = `<script type="application/ld+json">${
+    Ld(path) + "<"
+  }/script>`;
   let w;
+
+  console.log(JSON.stringify(path));
 
   const gradients = [
     ["#F8D7DD"], //original
@@ -73,6 +87,12 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="1200" />
   <meta property="og:site_name" content="Rodrigo Salmeron" />
+  <!--<script type="application/ld+json">
+    {
+      actualLd;
+    }
+  </script>-->
+  {@html jsonldScript}
 </svelte:head>
 
 <GoogleAnalytics {stores} id={ga_measurment_id} />
