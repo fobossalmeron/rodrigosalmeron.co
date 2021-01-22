@@ -53,5 +53,7 @@
   <h1>{locale.content.error.title}</h1>
   <p>
     {@html locale.content.error.p}
+  <br/>
+    <a href="/">Go to main site</a>
   </p>
 </TransitionWrapper>
