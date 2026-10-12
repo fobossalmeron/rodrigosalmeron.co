@@ -29,7 +29,7 @@ const Ld = (path) => {
         url: `https://rodrigosalmeron.co`,
         name: "Rodrigo Salmeron",
         description:
-          "Co-founder at Acueducto, an interface design and digital strategy firm.",
+          "Co-founder at Acueducto, a product design and development firm.",
         publisher: {
           "@id": "https://rodrigosalmeron.co/#organization",
         },
@@ -46,7 +46,7 @@ const Ld = (path) => {
           "@id": `https://rodrigosalmeron.co/#primaryimage`,
         },
         description:
-          "Co-founder at Acueducto, an interface design and digital strategy firm.",
+          "Co-founder at Acueducto, a product design and development firm.",
         inLanguage: "en",
       },
       {

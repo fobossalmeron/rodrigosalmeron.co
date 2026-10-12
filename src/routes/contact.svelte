@@ -79,7 +79,7 @@
     <a rel="external" href="mailto:hola@rodrigosalmeron.co">email</a>
     <a href="https://www.linkedin.com/in/rodrigosalmeron/">linkedin</a>
     <a href="https://github.com/fobossalmeron">github</a>
-    <a href="https://acueducto.studio/">
+    <a href="https://acueducto.com/">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -90,6 +90,6 @@
           stroke-linejoin="round"
           stroke-width="3"
           d="M39 15l13 13m0 0L39 41m13-13H32C16 28 2 19 2 2" />
-      </svg>acueducto.studio</a>
+      </svg>acueducto.com</a>
   </div>
 </TransitionWrapper>
